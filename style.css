@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    --bluXS: rgb(2, 0, 36);
+    --blu: rgba(9,9,121,1);
+    --cel: rgba(0,212,255,1);
+}
+
+@font-face {
+    font-family: LMM;
+    src: url(media/fonts/LEMONMILK-Medium.otf);
+}
+@font-face {
+    font-family: LMR;
+    src: url(media/fonts/LEMONMILK-Regular.otf);
+}
+.LMM {font-family: LMM;}
+.LMR {font-family: LMR;}
+
+body {
+    margin: 0;
+    font-family: 'Lucida Sans';
+    font-size: 25px;
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, var(--bluXS) 0%, var(--blu) 35%, var(--cel) 100%);
+    min-height: 100vh;
+    height: 100%;
+}
+.row::after {
+    content: ""; /*poi elimina il contenuto */
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■ For mobile phones ■■■■■■■■■■■■■■■■■■■■■■■ */
+[class*="col-"] {
+    width: 100%;
+}
+/*■■■■■■■■■■■■■■■■■■■■■■■■■■■ For desktop ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+@media only screen and (min-width: 768px) {
+    .col-1 {width: 50%;}
+    .col-2 {width: 100%;}
+}
+
+@keyframes idle {
+    0%      {transform: translateY(0);}
+    50%     {transform: translateY(5px);}
+    100%    {transform: translateY(0);}
+}
+@keyframes rotea {
+    0%      {transform: rotate(2deg);}
+    50%     {transform: rotate(-2deg);}
+    100%    {transform: rotate(2deg);}
+}
+
+.idle {
+    animation: idle 3s infinite ease-in-out;
+}
+.rotea {
+    animation: rotea 5s infinite ease-in-out;
+}
+
+a {text-decoration: none;}
+
+.ombra {
+    box-shadow: rgba(0, 0, 0, 0.434) 5px 10px 20px;
+}
+
+
+img {
+    width: 400px;
+    max-width: 100%;
+    border-radius: 50%;
+    margin: auto;
+    display: block;
+}
+
+.about {
+    text-align: center;
+    color: white;
+    padding: 0 100px 0 100px;
+}
+
+.socialText {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.social {
+    background-color:rgb(240, 240, 240);
+    color: black;
+    width: 50%;
+    border-radius:50px ;
+    margin: 0 auto 30px;
+    text-align: center;
+    padding: 10px 0;
+    transition: 0.5s;
+}
+.social:hover {
+    scale: 1.2;
+}
