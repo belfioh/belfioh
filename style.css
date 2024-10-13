@@ -25,6 +25,7 @@ body {
     background: rgb(2,0,36);
     background: linear-gradient(0deg, var(--bluXS) 0%, var(--blu) 35%, var(--cel) 100%);
     min-height: 100vh;
+    max-width: 100vw;
     height: 100%;
 }
 .row::after {
